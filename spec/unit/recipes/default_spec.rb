@@ -39,9 +39,5 @@ describe 'nginx::default' do
     it 'should delete the symlink from the default config in sites-enabled' do
       expect(chef_run).to delete_link('/etc/nginx/sites-enabled/default')
     end
-
-    it 'should create a proxy.conf template in /etc/nginx/sites-available with port 3000' do
-      expect(chef_run).to create_template("/etc/nginx/sites-available/proxy.conf").with_variables(proxy_port: 3000, proxy_port2: 3030)
-    end
   end
 end
