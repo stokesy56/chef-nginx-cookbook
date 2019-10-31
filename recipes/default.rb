@@ -15,8 +15,8 @@ end
 
 template '/etc/nginx/sites-available/proxy.conf' do
   source 'proxy.conf.erb'
-  variables(proxy_port: node['nginx']['proxy_port'],
-    proxy_port2: node['nginx']['proxy_port_2'])
+  #variables(proxy_port: node['nginx']['proxy_port'],
+    #proxy_port2: node['nginx']['proxy_port_2'])
 end
 
 link '/etc/nginx/sites-enabled/proxy.conf' do
