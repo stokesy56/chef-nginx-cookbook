@@ -14,6 +14,3 @@ describe service 'nginx' do
   it { should be_running }
   it { should be_enabled }
 end
-describe port(3000) do
-  it { should_not be_listening }
-end

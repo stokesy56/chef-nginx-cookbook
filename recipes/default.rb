@@ -24,6 +24,6 @@ link '/etc/nginx/sites-enabled/proxy.conf' do
 end
 
 link '/etc/nginx/sites-enabled/default' do
- action :delete
- notifies :restart, "service[nginx]"
+  action :delete
+  notifies :restart, "service[nginx]"
 end
